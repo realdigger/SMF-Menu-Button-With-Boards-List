@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info">
+
+    <id>digger:menu_button_with_boards_list</id>
+    <name>Menu Button With Boards List</name>
+    <type>modification</type>
+    <version>1.0</version>
+
+    <install for="2.0 - 2.1.99">
+        <readme type="file" parsebbc="true">readme/english.txt</readme>
+        <readme type="file" parsebbc="true" lang="english-utf8">readme/english-utf8.txt</readme>
+        <readme type="file" parsebbc="true" lang="russian">readme/russian.txt</readme>
+        <readme type="file" parsebbc="true" lang="russian-utf8">readme/russian-utf8.txt</readme>
+        <require-dir name="Sources" destination="$boarddir"/>
+        <require-dir name="Themes" destination="$boarddir"/>
+        <code>add_settings.php</code>
+        <code>hooks.php</code>
+        <redirect url="?action=admin;area=modsettings;sa=menu_button_with_boards_list"/>
+    </install>
+
+    <uninstall for="2.0 - 2.1.99">
+        <remove-file name="$sourcedir/Mod-MenuButtonWithBoardsList.php"/>
+        <remove-dir name="$languagedir/MenuButtonWithBoardsList"/>
+        <code>hooks.php</code>
+    </uninstall>
+
+</package-info>

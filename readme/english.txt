@@ -1,0 +1,4 @@
+[center][b]Menu Button With Boards List[/b][/center]
+
+Add new main menu button with list of boards from selected categories.
+Author: [url=http://mysmf.ru]digger[/url]
