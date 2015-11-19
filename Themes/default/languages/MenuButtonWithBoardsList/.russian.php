@@ -12,6 +12,4 @@ $txt['menu_button_with_boards'] = 'Кнопка меню для категорий';
 $txt['menu_button_with_boards_settings'] = 'Настройки';
 $txt['menu_button_with_boards_title'] = 'Название кнопки';
 $txt['menu_button_with_boards_cats'] = 'ID категории';
-$txt['menu_button_with_boards_cats_desc'] = 'Если категорий несколько, перечислите их через запятую';
-//$txt['menu_button_with_boards_new'] = 'Показывать значок new';
-//$txt['menu_button_with_boards_new_desc'] = 'Для залогиненных пользователей при наличии обновленных тем в разделах';
+$txt['menu_button_with_boards_cats_desc'] = 'Если категорий несколько, перечислите их ID через запятую';

@@ -16,7 +16,7 @@
         <require-dir name="Themes" destination="$boarddir"/>
         <code>add_settings.php</code>
         <code>hooks.php</code>
-        <redirect url="?action=admin;area=modsettings;sa=menu_button_with_boards_list"/>
+        <redirect url="?action=admin;area=modsettings;sa=menu_button_with_boards"/>
     </install>
 
     <uninstall for="2.0 - 2.1.99">

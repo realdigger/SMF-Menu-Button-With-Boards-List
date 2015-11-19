@@ -94,18 +94,22 @@ function addMenuButtonWithBoardsListCopyright()
     }
 }
 
+
+/**
+ * Add menu button
+ * @param $menu_buttons
+ */
 function addMenuButtonWithBoardsList(&$menu_buttons)
 {
     global $txt, $sourcedir, $scripturl, $user_info, $cat_tree, $modSettings;
 
-    $modSettings['menu_button_with_boards_after'] = 'site';
-    $modSettings['menu_button_with_boards_cache'] = 60 * 60 * 24;
+    $modSettings['menu_button_with_boards_after'] = 'home';
+    $modSettings['menu_button_with_boards_cache'] = 60 * 60 * 24 * 365;
 
-    if (empty($menu_buttons) || empty($modSettings['menu_button_with_boards_cats'])) {
+    if (empty($menu_buttons) || empty($modSettings['menu_button_with_boards_cats']) || empty($modSettings['menu_button_with_boards_title'])) {
         return;
     } // don't use in portal blocks
 
-    $modSettings['menu_button_with_boards_after'] = 'site';
     $categories = explode(',', str_replace(' ', '', $modSettings['menu_button_with_boards_cats']));
 
     if (empty($categories)) {
@@ -122,7 +126,17 @@ function addMenuButtonWithBoardsList(&$menu_buttons)
         $buttonSubItems = array();
 
         foreach ($categories as $categoryID) {
+
+            if (!empty($buttonItems)) {
+                $buttonItems[] = array(
+                    'title' => '<hr />',
+                    'href' => '',
+                    'show' => true,
+                );
+            }
+
             foreach ($cat_tree[$categoryID]['children'] as $childID => $category) {
+
                 if (!empty($cat_tree[$categoryID]['children'][$childID]['children'])) {
                     foreach ($cat_tree[$categoryID]['children'][$childID]['children'] as $childSubID => $categorySub) {
                         $buttonSubItems[] = array(
@@ -143,11 +157,6 @@ function addMenuButtonWithBoardsList(&$menu_buttons)
                 );
                 $buttonSubItems = null;
             }
-            $buttonItems[] = array(
-                'title' => '<hr />',
-                'href' => '',
-                'show' => true,
-            );
         }
 
         $new_button = array(
