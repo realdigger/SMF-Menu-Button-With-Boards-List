@@ -1,4 +1,4 @@
 [center][b]Menu Button With Boards List[/b][/center]
 
 Мод добавляет в меню навигации кнопку со списком разделов в заданных категорий.
-Автор: [url=http://mysmf.ru]digger[/url]
+Автор: [url=http://mysmf.net]digger[/url]

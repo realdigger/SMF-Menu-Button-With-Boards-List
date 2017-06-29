@@ -1,17 +1,15 @@
 <?php
 /**
  * @package Menu Button With Boards List
- * @author digger http://mysmf.ru
- * @copyright 2015
- * @license CC BY-NC-ND 4.0 http://creativecommons.org/licenses/by-nc-nd/4.0/
- * @version 1.0
+ * @author digger http://mysmf.net
+ * @copyright 2015-2017
+ * @license The MIT License (MIT) https://opensource.org/licenses/MIT
+ * @version 1.1
  */
-
 
 if (!defined('SMF')) {
     die('Hacking attempt...');
 }
-
 
 /**
  * Load all needed hooks
@@ -24,7 +22,6 @@ function loadMenuButtonWithBoardsListHooks()
     add_integration_function('integrate_menu_buttons', 'addMenuButtonWithBoardsListCopyright', false);
 }
 
-
 /**
  * Add admin area
  * @param $admin_areas
@@ -32,11 +29,10 @@ function loadMenuButtonWithBoardsListHooks()
 function addMenuButtonWithBoardsListAdminArea(&$admin_areas)
 {
     global $txt;
-    loadLanguage('MenuButtonWithBoardsList/');
+    loadLanguage('MenuButtonWBL/MenuButtonWBL');
 
     $admin_areas['config']['areas']['modsettings']['subsections']['menu_button_with_boards'] = array($txt['menu_button_with_boards']);
 }
-
 
 /**
  * Add admin area action
@@ -47,7 +43,6 @@ function addMenuButtonWithBoardsListAdminAction(&$subActions)
     $subActions['menu_button_with_boards'] = 'addMenuButtonWithBoardsListAdminSettings';
 }
 
-
 /**
  * @param bool $return_config
  * @return array config vars
@@ -55,7 +50,7 @@ function addMenuButtonWithBoardsListAdminAction(&$subActions)
 function addMenuButtonWithBoardsListAdminSettings($return_config = false)
 {
     global $txt, $scripturl, $context;
-    loadLanguage('MenuButtonWithBoardsList/');
+    loadLanguage('MenuButtonWBL/MenuButtonWBL');
 
     $context['page_title'] = $txt['menu_button_with_boards'];
     $context['post_url'] = $scripturl . '?action=admin;area=modsettings;save;sa=menu_button_with_boards';
@@ -65,7 +60,6 @@ function addMenuButtonWithBoardsListAdminSettings($return_config = false)
         array('title', 'menu_button_with_boards_settings'),
         array('text', 'menu_button_with_boards_title'),
         array('text', 'menu_button_with_boards_cats', 'subtext' => $txt['menu_button_with_boards_cats_desc']),
-        //array('check', 'menu_button_with_boards_new', 'desc' => $txt['menu_button_with_boards_new_desc']),
     );
 
     if ($return_config) {
@@ -90,10 +84,9 @@ function addMenuButtonWithBoardsListCopyright()
     global $context;
 
     if ($context['current_action'] == 'credits') {
-        $context['copyrights']['mods'][] = '<a href="http://mysmf.ru/mods/menu-button-with-boards-list" target="_blank">Menu Button With Boards List</a> &copy; 2013-2015, digger';
+        $context['copyrights']['mods'][] = '<a href="https://mysmf.net/mods/menu-button-with-boards-list" target="_blank">Menu Button With Boards List</a> &copy; 2015-2017, digger';
     }
 }
-
 
 /**
  * Add menu button
@@ -134,6 +127,8 @@ function addMenuButtonWithBoardsList(&$menu_buttons)
                     'show' => true,
                 );
             }
+
+            if (empty($cat_tree[$categoryID]['children'])) return;
 
             foreach ($cat_tree[$categoryID]['children'] as $childID => $category) {
 

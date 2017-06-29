@@ -5,7 +5,7 @@
     <id>digger:menu_button_with_boards_list</id>
     <name>Menu Button With Boards List</name>
     <type>modification</type>
-    <version>1.0</version>
+    <version>1.1</version>
 
     <install for="2.0 - 2.1.99">
         <readme type="file" parsebbc="true">readme/english.txt</readme>

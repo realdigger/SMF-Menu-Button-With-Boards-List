@@ -2,7 +2,7 @@
 /**
  * @package Menu Button With Boards List
  * @author digger http://mysmf.net
- * @copyright 2013-2017
+ * @copyright 2015-2017
  * @license The MIT License (MIT) https://opensource.org/licenses/MIT
  * @version 1.0
  */
