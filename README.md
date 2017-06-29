@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/realdigger/SMF-Menu-Button-With-Boards-List.svg?branch=master)](https://travis-ci.org/realdigger/SMF-Menu-Button-With-Boards-List)
 # SMF Menu Button With Boards List mod
 * **Author:** digger [http://mysmf.net](http://mysmf.net)
 * **License:** The MIT License (MIT) https://opensource.org/licenses/MIT
