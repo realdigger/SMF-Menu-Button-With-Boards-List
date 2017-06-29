@@ -1,12 +1,11 @@
 <?php
 /**
  * @package Menu Button With Boards List
- * @author digger http://mysmf.ru
- * @copyright 2015
- * @license CC BY-NC-ND 4.0 http://creativecommons.org/licenses/by-nc-nd/4.0/
+ * @author digger http://mysmf.net
+ * @copyright 2013-2017
+ * @license The MIT License (MIT) https://opensource.org/licenses/MIT
  * @version 1.0
  */
-
 
 $txt['menu_button_with_boards'] = 'Кнопка меню для категорий';
 $txt['menu_button_with_boards_settings'] = 'Настройки';

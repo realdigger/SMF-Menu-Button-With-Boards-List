@@ -14,15 +14,15 @@
         <readme type="file" parsebbc="true" lang="russian-utf8">readme/russian-utf8.txt</readme>
         <require-dir name="Sources" destination="$boarddir"/>
         <require-dir name="Themes" destination="$boarddir"/>
-        <code>add_settings.php</code>
-        <code>hooks.php</code>
+        <database>settings.php</database>
+        <database>hooks.php</database>
         <redirect url="?action=admin;area=modsettings;sa=menu_button_with_boards"/>
     </install>
 
     <uninstall for="2.0 - 2.1.99">
         <remove-file name="$sourcedir/Mod-MenuButtonWithBoardsList.php"/>
-        <remove-dir name="$languagedir/MenuButtonWithBoardsList"/>
-        <code>hooks.php</code>
+        <remove-dir name="$languagedir/MenuButtonWBL"/>
+        <database>hooks.php</database>
     </uninstall>
 
 </package-info>
