@@ -1,4 +1,9 @@
-[![Build Status](https://travis-ci.org/realdigger/SMF-Menu-Button-With-Boards-List.svg?branch=master)](https://travis-ci.org/realdigger/SMF-Menu-Button-With-Boards-List)
+[![GitHub release](https://img.shields.io/github/release/realdigger/SMF-Menu-Button-With-Boards-List.svg)](https://github.com/realdigger/SMF-MathJax/releases)
+[![Build Status](https://travis-ci.org/realdigger/SMF-Menu-Button-With-Boards-List.svg?branch=master)](https://travis-ci.org/realdigger/SMF-MathJax)
+[![SMF](https://img.shields.io/badge/SMF-2.0-blue.svg?style==flat)](https://simplemachines.org)
+[![SMF](https://img.shields.io/badge/SMF-2.1-blue.svg?style==flat)](https://simplemachines.org)
+[![license](https://img.shields.io/github/license/realdigger/SMF-Menu-Button-With-Boards-List.svg)](https://github.com/realdigger/SMF-MathJax/blob/master/license.txt)  
+
 # SMF Menu Button With Boards List mod
 * **Author:** digger [http://mysmf.net](http://mysmf.net)
 * **License:** The MIT License (MIT) https://opensource.org/licenses/MIT
